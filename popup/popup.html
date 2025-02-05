@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Extension Popup</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="nav">
+    <button class="nav-btn" data-tab="lichess">Lichess</button>
+    <button class="nav-btn" data-tab="chess">Chess.com</button>
+    <button id="settings-btn" data-tab="settings">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="content" class="content">
+    <div id="lichess-content" style="display: none;">
+      <div class="sub-nav">
+        <button class="sub-nav-btn" data-subtab="lichess-settings">설정 변경</button>
+        <button class="sub-nav-btn" data-subtab="lichess-stats">전적 검색</button>
+        <button class="sub-nav-btn" data-subtab="lichess-misc">미정</button>
+      </div>
+      <div id="lichess-settings" class="sub-content">Lichess 설정 변경</div>
+      <div id="lichess-stats" class="sub-content" style="display: none;">Lichess 전적 검색</div>
+      <div id="lichess-misc" class="sub-content" style="display: none;">Lichess 미정 기능</div>
+    </div>
+    <div id="chess-content" style="display: none;">
+      <div class="sub-nav">
+        <button class="sub-nav-btn" data-subtab="chess-settings">설정 변경</button>
+        <button class="sub-nav-btn" data-subtab="chess-stats">전적 검색</button>
+        <button class="sub-nav-btn" data-subtab="chess-misc">미정</button>
+      </div>
+      <div id="chess-settings" class="sub-content">
+        <div class="switch-container">
+          <label class="switch">
+            <input type="checkbox" id="tierSwitch">
+            <span class="slider"></span>
+          </label>
+          <span class="switch-label">티어 기능 켜기</span>
+        </div>
+      </div>
+      <div id="chess-stats" class="sub-content" style="display: none;">Chess.com 전적 검색</div>
+      <div id="chess-misc" class="sub-content" style="display: none;">Chess.com 미정 기능</div>
+    </div>
+    <div id="settings-content" style="display: none;">
+      <div class="sub-nav">
+        <button class="sub-nav-btn" data-subtab="extension-settings">설정 변경</button>
+        <button class="sub-nav-btn" data-subtab="extension-stats">통계</button>
+        <button class="sub-nav-btn" data-subtab="extension-misc">미정</button>
+      </div>
+      <div id="extension-settings" class="sub-content">확장 프로그램 설정</div>
+      <div id="extension-stats" class="sub-content" style="display: none;">확장 프로그램 통계</div>
+      <div id="extension-misc" class="sub-content" style="display: none;">확장 프로그램 미정 기능</div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
