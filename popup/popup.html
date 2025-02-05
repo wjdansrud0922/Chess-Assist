@@ -44,7 +44,16 @@
           <span class="switch-label">티어 기능 켜기</span>
         </div>
       </div>
-      <div id="chess-stats" class="sub-content" style="display: none;">Chess.com 전적 검색</div>
+      <div id="chess-stats" class="sub-content" style="display: none;">
+        <h3>Chess.com 전적 검색</h3>
+        <input type="text" id="chess-username" placeholder="Chess.com 사용자명 입력">
+        <button id="search-chess-btn">전적 검색</button>
+        <div id="chess-stats-result" style="display: none;">
+          <h4>전적 결과</h4>
+          <div id="chess-stats-data"></div>
+        </div>
+      </div>
+      
       <div id="chess-misc" class="sub-content" style="display: none;">Chess.com 미정 기능</div>
     </div>
     <div id="settings-content" style="display: none;">
@@ -60,5 +69,6 @@
   </div>
 
   <script src="popup.js"></script>
+  <script src="search.js"></script>
 </body>
-</html>
+</html> 
