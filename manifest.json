@@ -14,12 +14,12 @@
     {
       "matches": ["https://www.chess.com/*"],
       "all_frames": true,
-      "js": ["Tier.js"],
+      "js": ["src/Tier.js"],
       "run_at": "document_idle"
     }
   ],
   "action": {
-    "default_popup": "popup/popup.html"
+    "default_popup": "src/popup/popup.html"
   },
   "permissions": ["storage"]
 }
