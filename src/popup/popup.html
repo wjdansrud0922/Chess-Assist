@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+
   <div class="nav">
-    <button class="nav-btn" data-tab="lichess">Lichess</button>
-    <button class="nav-btn" data-tab="chess">Chess.com</button>
+    <button class="nav-btn" data-tab="chess">Chess Assist</button>
     <button id="settings-btn" data-tab="settings">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="3"></circle>
@@ -19,23 +19,16 @@
   </div>
 
   <div id="content" class="content">
-    <div id="lichess-content" style="display: none;">
-      <div class="sub-nav">
-        <button class="sub-nav-btn" data-subtab="lichess-settings">설정 변경</button>
-        <button class="sub-nav-btn" data-subtab="lichess-stats">전적 검색</button>
-        <button class="sub-nav-btn" data-subtab="lichess-misc">미정</button>
-      </div>
-      <div id="lichess-settings" class="sub-content">Lichess 설정 변경</div>
-      <div id="lichess-stats" class="sub-content" style="display: none;">Lichess 전적 검색</div>
-      <div id="lichess-misc" class="sub-content" style="display: none;">Lichess 미정 기능</div>
-    </div>
+
     <div id="chess-content" style="display: none;">
+   
       <div class="sub-nav">
-        <button class="sub-nav-btn" data-subtab="chess-settings">설정 변경</button>
+        <button class="sub-nav-btn" data-subtab="chess-settings" id="default-subtab">설정 변경</button>
         <button class="sub-nav-btn" data-subtab="chess-stats">전적 검색</button>
-        <button class="sub-nav-btn" data-subtab="chess-misc">미정</button>
+        <button class="sub-nav-btn" data-subtab="chess-myinfo">내 정보</button>
       </div>
-      <div id="chess-settings" class="sub-content">
+
+      <div id="chess-settings" class="sub-content" style="display: block;">
         <div class="switch-container">
           <label class="switch">
             <input type="checkbox" id="tierSwitch">
@@ -44,6 +37,8 @@
           <span class="switch-label">티어 기능 켜기</span>
         </div>
       </div>
+      
+   
       <div id="chess-stats" class="sub-content" style="display: none;">
         <h3>Chess.com 전적 검색</h3>
         <input type="text" id="chess-username" placeholder="Chess.com 사용자명 입력">
@@ -52,23 +47,36 @@
           <h4>전적 결과</h4>
           <div id="chess-stats-data"></div>
         </div>
+     
+        <div id="chess-stats-dynamic"></div>
       </div>
-      
-      <div id="chess-misc" class="sub-content" style="display: none;">Chess.com 미정 기능</div>
+
+   
+      <div id="chess-myinfo" class="sub-content" style="display: none;">
+  
+      </div>
     </div>
+
     <div id="settings-content" style="display: none;">
       <div class="sub-nav">
-        <button class="sub-nav-btn" data-subtab="extension-settings">설정 변경</button>
+        <button class="sub-nav-btn" data-subtab="extension-settings" id="ext-default-subtab">의견 주기</button>
         <button class="sub-nav-btn" data-subtab="extension-stats">통계</button>
         <button class="sub-nav-btn" data-subtab="extension-misc">미정</button>
       </div>
-      <div id="extension-settings" class="sub-content">확장 프로그램 설정</div>
-      <div id="extension-stats" class="sub-content" style="display: none;">확장 프로그램 통계</div>
-      <div id="extension-misc" class="sub-content" style="display: none;">확장 프로그램 미정 기능</div>
+      <div id="extension-settings" class="sub-content" style="display: block;">
+        확장 프로그램 설정
+      </div>
+      <div id="extension-stats" class="sub-content" style="display: none;">
+        확장 프로그램 통계
+      </div>
+      <div id="extension-misc" class="sub-content" style="display: none;">
+        확장 프로그램 미정 기능
+      </div>
     </div>
   </div>
+
 
   <script src="popup.js"></script>
   <script src="search.js"></script>
 </body>
-</html> 
+</html>
